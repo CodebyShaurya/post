@@ -30,7 +30,10 @@ app.post('/music-suggestions', async (req, res) => {
     if (mood) prompt += `- Mood: ${mood}\n`;
     if (genre) prompt += `- Genre: ${genre}\n`;
     if (language) prompt += `- Language: ${language}\n`;
-    prompt += `\nProvide a list of just song titles and artists. do not give desciptions or any other information.`;
+    prompt += `\nProvide a list of just song titles and artists. do not give desciptions or any other information. makle sure to include the artist name in the format "Song Title - Artist Name".\n`;
+    prompt += `\n\nPlease provide a list of 5 songs that are not well known, but are good for an Instagram post.\n`;
+     prompt += `\nmake sure the content is about songs and msuics only and no sort of aduilt content or non musical content is presaent in the reply.\n`;
+
 
     console.log("Constructed prompt:", prompt);
 
