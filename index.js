@@ -58,6 +58,10 @@ app.post('/music-suggestions', async (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.send('Running');
+});
+
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
